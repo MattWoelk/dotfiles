@@ -74,3 +74,42 @@ augroup FastEscape
     au InsertEnter * set timeoutlen=0
     au InsertLeave * set timeoutlen=1000
 augroup END
+
+
+
+""The following lines are from Ben's vimrc.local: https://github.com/BenBergman/.spf13-vim-conf/blob/master/.vimrc.local#L138
+let nasl_space_errors = 1
+autocmd BufNewFile,BufRead *.audit set syntax=xml
+autocmd BufNewFile,BufRead *.nasl set filetype=nasl
+autocmd BufNewFile,BufRead *.inc set filetype=nasl
+autocmd BufNewFile,BufRead *.inc set indentexpr=
+autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 colorcolumn=70
+autocmd FileType nasl set commentstring=#\ %s
+
+let g:tagbar_type_nasl = {
+        \ 'ctagstype' : 'nasl',
+        \ 'kinds' : [
+                \ 'f:functions',
+                \ 'v:variables',
+                \ 'g:globals',
+        \ ]
+\ }
+
+let g:syntastic_nasl_checkers = ['nasl_parse', 'nasl']
+
+map <leader>rv :call VimuxRunCommand("clear; validate-plugin -s -s " . bufname("%"))<CR>
+
+function! NamedArgsExpand()
+        :s/,\s*/,
+/g
+        ?(
+        :s/(\s*/(
+/
+        /)
+        :s/\s*)/
+)/
+        normal V%=
+        /:
+        :Tabularize /:
+endfunction
+autocmd FileType nasl map <silent> <leader>ne :call NamedArgsExpand()<CR>
