@@ -18,3 +18,5 @@ map yd -ex tabdetach
 "press x to hide/show the tab bar. This actually just toggles firefox's fullscreen mode
 map x -ex set invfullscreen
 map e -javascript TreeStyleTabService._autoHideWindow.toggleMode()
+
+map <CR> :noh<CR>
