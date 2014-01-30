@@ -16,19 +16,8 @@ map <S-L> <S-L>
 vunmap >
 vunmap <
 
-"change ctrlp button
-"let g:ctrlp_map = '<c-j>'
-
 "remove frustration:
 noremap Q <Nop>
-
-"ctrl p and n to switch tabs
-"nnoremap <C-n> gt
-"nnoremap <C-p> gT
-
-"trying something new...
-""nnoremap
-""nnoremap
 
 "give back C-e
 unmap <C-e>
@@ -62,11 +51,6 @@ nnoremap gb :ls<cr>:buffer
 map <leader>r <Esc>:%s/\(<C-r>/\)//g<left><left>
 map <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>"
 
-" For use with ShowMarks: http://www.vim.org/scripts/script.php?script_id=2142
-""nnoremap ' :ShowMarksOnce<cr>'
-"nnoremap ` :ShowMarksOnce<cr>`
-"let g:showmarks_marks = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>.[]"
-
 " make escape instant; get rid of escape delay"
 set ttimeoutlen=10
 augroup FastEscape
@@ -96,8 +80,6 @@ let g:tagbar_type_nasl = {
 \ }
 
 let g:syntastic_nasl_checkers = ['nasl_parse', 'nasl']
-
-map <leader>rv :call VimuxRunCommand("clear; validate-plugin -s -s " . bufname("%"))<CR>
 
 function! NamedArgsExpand()
         :s/,\s*/,
