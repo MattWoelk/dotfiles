@@ -1,15 +1,10 @@
-"2.1 (created: 2009/05/21 13:13:06)
-
-"set runtimepath=/Users/matthewwoelk/.vimperator
-"source! /Users/matthewwoelk/.vimperatorrc.local
-
 set complete=slf
 set editor='/usr/bin/gvim -f'
 set guioptions=bCrsn
 "set vb=false
 set showtabline=multitab
 set defsearch=google
-set hlsearch
+set hlfind
 
 command! -nargs=* bmlist tabopen about:mybookmarks 
 command! -nargs=1 popup execute "open " + content.location.host
