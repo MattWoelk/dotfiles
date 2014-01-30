@@ -1,0 +1,6 @@
+set show-date = relative
+set show-id = true
+set show-author = false
+set read-git-colors = true
+set commit-order = date
+set line-graphics = utf-8

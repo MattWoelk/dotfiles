@@ -1,0 +1,46 @@
+[user]
+	name = Matt Woelk
+	email = matt@mattwoelk.ca
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 781
+	main-window-view = FileView
+	file-view-vpane-position = 412
+[color]
+	ui = true
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+[alias]
+	l = log --graph --decorate --oneline --all --date-order
+	lp = log --graph --decorate --oneline --all --date-order -p
+	co = checkout
+	br = branch -v
+	ci = commit
+	st = status
+	s  = status -sb
+	di = diff
+	diw = diff --word-diff
+	dic = diff --cached
+	dis = diff --staged
+	dih = diff HEAD
+	dicw = diff --word-diff --cached
+	disw = diff --word-diff --staged
+	dihw = diff --word-diff HEAD
+	dt = difftool --no-prompt
+	mt = mergetool --no-prompt
+	pull-base = pull --rebase
+	unstage   = reset HEAD --
+	undo-file = checkout --
+	last = log -1 HEAD -p
+	lastw = log -1 HEAD -p --word-diff
+	ignored = ls-files . --ignored --exclude-standard --others
+	untracked = ls-files . --exclude-standard --others
+[diff]
+	tool = vimdiff
+	mnemonicprefix = true
+[core]
+	editor = vim
+[push]
+	default = matching
