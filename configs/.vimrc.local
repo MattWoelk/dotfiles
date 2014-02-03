@@ -95,3 +95,6 @@ function! NamedArgsExpand()
         :Tabularize /:
 endfunction
 autocmd FileType nasl map <silent> <leader>ne :call NamedArgsExpand()<CR>
+
+""Quickly add a semicolon to the end of the current line;
+autocmd FileType nasl map <silent> <leader>; mpA;<Esc>`p
