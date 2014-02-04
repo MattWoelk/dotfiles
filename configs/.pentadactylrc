@@ -6,26 +6,27 @@ set showtabline=multitab
 set defsearch=google
 set hlfind
 
-command! -nargs=* bmlist tabopen about:mybookmarks 
+command! -nargs=* bmlist tabopen about:mybookmarks
 command! -nargs=1 popup execute "open " + content.location.host
 
-"press yt to view a YouTube video as fullscreened within the window
+""press yt to view a YouTube video as fullscreened within the window
 map yt -js dactyl.open( String.replace(buffer.URL, /watch/, "watch_popup") )
 
-"press yd to break the current tab into its own window
+""press yd to break the current tab into its own window
 map yd -ex tabdetach
 
-"press x to hide/show the tab bar. This actually just toggles firefox's fullscreen mode
+""press x to toggles firefox's fullscreen mode
 map x -ex set invfullscreen
-map e -javascript TreeStyleTabService._autoHideWindow.toggleMode()
+""press e to hide/show the tab bar.
+map e :set showtabline!=always,never<CR>
 
 map <CR> :noh<CR>
 
 "reclaim copy and paste keys
-nnoremap <C-c> <C-v><C-c>
-nnoremap <C-v> <C-v><C-v>
-nnoremap <C-x> <C-v><C-x>
+nmap -builtin <C-c> <C-v><C-c>
+nmap -builtin <C-v> <C-v><C-v>
+nmap -builtin <C-x> <C-v><C-x>
 
-inoremap <C-c> <C-v><C-c>
-inoremap <C-v> <C-v><C-v>
-inoremap <C-x> <C-v><C-x>
+imap -builtin <C-c> <C-v><C-c>
+imap -builtin <C-v> <C-v><C-v>
+imap -builtin <C-x> <C-v><C-x>
