@@ -1,8 +1,6 @@
 set complete=slf
 set editor='/usr/bin/gvim -f'
 set guioptions=bCrsn
-"set vb=false
-set showtabline=multitab
 set defsearch=google
 set hlfind
 
@@ -17,9 +15,12 @@ map yd -ex tabdetach
 
 ""press x to toggles firefox's fullscreen mode
 map x -ex set invfullscreen
+
 ""press e to hide/show the tab bar.
 map e :set showtabline!=always,never<CR>
+set showtabline=always
 
+""press enter to hide search highlighting
 map <CR> :noh<CR>
 
 "reclaim copy and paste keys
