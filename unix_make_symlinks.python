@@ -2,18 +2,20 @@
 import os
 from os.path import expanduser
 
-def create_symlink(source, destination):
+def delete_if_exists(file):
     try:
-        os.remove(destination)
+        os.remove(file)
     except FileNotFoundError:
         pass
+
+def create_symlink(source, destination):
     print('symlinking', source, 'to', destination)
+    delete_if_exists(destination)
     os.symlink(source, destination)
 
-files = os.listdir('configs')
 home = expanduser("~") + '/'
-pwd = os.getcwd()
-config_files_directory = pwd + '/configs/'
+config = os.getcwd() + '/configs/'
+files = os.listdir('configs')
 
 for file in files:
-    create_symlink(config_files_directory + file, home + file)
+    create_symlink(config + file, home + file)
