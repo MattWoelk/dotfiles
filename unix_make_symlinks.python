@@ -1,0 +1,15 @@
+import os
+from os.path import expanduser
+
+def create_symlink(source, destination):
+    os.remove(destination)
+    print('symlinking', source, 'to', destination)
+    os.symlink(source, destination)
+
+files = os.listdir('configs')
+home = expanduser("~") + '/'
+pwd = os.getcwd()
+config_files_directory = ''.join([pwd, '/configs/'])
+
+for file in files:
+    create_symlink(config_files_directory + file, home + file)
