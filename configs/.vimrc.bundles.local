@@ -1,0 +1,3 @@
+" to run: vim +BundleInstall +qall"
+Bundle 'tenable/vim-nasl'
+UnBundle 'justinmk/vim-sneak'

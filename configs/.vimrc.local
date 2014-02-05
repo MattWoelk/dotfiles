@@ -16,19 +16,8 @@ map <S-L> <S-L>
 vunmap >
 vunmap <
 
-"change ctrlp button
-"let g:ctrlp_map = '<c-j>'
-
 "remove frustration:
 noremap Q <Nop>
-
-"ctrl p and n to switch tabs
-"nnoremap <C-n> gt
-"nnoremap <C-p> gT
-
-"trying something new...
-""nnoremap
-""nnoremap
 
 "give back C-e
 unmap <C-e>
@@ -62,11 +51,6 @@ nnoremap gb :ls<cr>:buffer
 map <leader>r <Esc>:%s/\(<C-r>/\)//g<left><left>
 map <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>"
 
-" For use with ShowMarks: http://www.vim.org/scripts/script.php?script_id=2142
-""nnoremap ' :ShowMarksOnce<cr>'
-"nnoremap ` :ShowMarksOnce<cr>`
-"let g:showmarks_marks = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>.[]"
-
 " make escape instant; get rid of escape delay"
 set ttimeoutlen=10
 augroup FastEscape
@@ -74,3 +58,43 @@ augroup FastEscape
     au InsertEnter * set timeoutlen=0
     au InsertLeave * set timeoutlen=1000
 augroup END
+
+
+
+""The following lines are from Ben's vimrc.local: https://github.com/BenBergman/.spf13-vim-conf/blob/master/.vimrc.local#L138
+let nasl_space_errors = 1
+autocmd BufNewFile,BufRead *.audit set syntax=xml
+autocmd BufNewFile,BufRead *.nasl set filetype=nasl
+autocmd BufNewFile,BufRead *.inc set filetype=nasl
+autocmd BufNewFile,BufRead *.inc set indentexpr=
+autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 colorcolumn=70
+autocmd FileType nasl set commentstring=#\ %s
+
+let g:tagbar_type_nasl = {
+        \ 'ctagstype' : 'nasl',
+        \ 'kinds' : [
+                \ 'f:functions',
+                \ 'v:variables',
+                \ 'g:globals',
+        \ ]
+\ }
+
+let g:syntastic_nasl_checkers = ['nasl_parse', 'nasl']
+
+function! NamedArgsExpand()
+        :s/,\s*/,
+/g
+        ?(
+        :s/(\s*/(
+/
+        /)
+        :s/\s*)/
+)/
+        normal V%=
+        /:
+        :Tabularize /:
+endfunction
+autocmd FileType nasl map <silent> <leader>ne :call NamedArgsExpand()<CR>
+
+""Quickly add a semicolon to the end of the current line;
+autocmd FileType nasl map <silent> <leader>; mpA;<Esc>`p

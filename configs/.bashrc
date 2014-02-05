@@ -137,7 +137,7 @@ export PATH=/opt/local/libexec/gnubin/:/opt/local/bin:/opt/local/sbin:$PATH
 
 # Enable bash completion for git
 # The source is downloaded from here: https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-source ~/Dropbox/git-completion.bash
+source ~/.git-completion.bash
 
 # alias g to git, and allow autocompletion for it as well
 alias g='git'
@@ -150,7 +150,7 @@ alias t='tig --all'
 alias ts='tig status'
 
 # Use LS_COLORS
-eval $( dircolors -b $HOME/Dropbox/.LS_COLORS)
+eval $( dircolors -b $HOME/.LS_COLORS)
 
 ##
 # Your previous /Users/woelk/.bash_profile file was backed up as /Users/woelk/.bash_profile.macports-saved_2012-12-11_at_10:13:47
