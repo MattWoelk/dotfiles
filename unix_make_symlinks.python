@@ -2,7 +2,10 @@ import os
 from os.path import expanduser
 
 def create_symlink(source, destination):
-    os.remove(destination)
+    try:
+        os.remove(destination)
+    except FileNotFoundError:
+        pass
     print('symlinking', source, 'to', destination)
     os.symlink(source, destination)
 
