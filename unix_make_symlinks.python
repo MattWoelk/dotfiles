@@ -13,7 +13,7 @@ def create_symlink(source, destination):
 files = os.listdir('configs')
 home = expanduser("~") + '/'
 pwd = os.getcwd()
-config_files_directory = ''.join([pwd, '/configs/'])
+config_files_directory = pwd + '/configs/'
 
 for file in files:
     create_symlink(config_files_directory + file, home + file)
