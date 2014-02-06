@@ -25,6 +25,7 @@ function l() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
 alias grep='grep -n --colour'
 alias matlab='matlab -nosplash -nodesktop'
 alias less='less -R' #allow less to show colours properly
+alias lessp='less --quit-if-one-screen'
 alias r='ranger'
 alias p='ipython --pylab'
 alias info='info --vi-keys'
