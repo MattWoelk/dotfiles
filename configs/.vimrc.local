@@ -1,20 +1,16 @@
 " THIS IS FOR USE WITH spf13-vim "
-" my edits to ther other file has lines which start with ""
+" my edits to the other file has lines which start with ""
 
 colorscheme ir_black
 nnoremap <CR> :noh<CR>
-
-"disallow spf13-vim to overwrite H and L commands
-"as well as C-h through C-l
-let g:spf13_no_fastTabs = 1
-map <S-H> <S-H>
-map <S-L> <S-L>
-"let g:spf13_no_easyWindows = 1
 
 "exit visual mode when indenting (back to normal)
 "to indent again, just hit '.'
 vunmap >
 vunmap <
+
+"" \ is the new ,
+noremap \ ,
 
 "remove frustration:
 noremap Q <Nop>
@@ -41,6 +37,7 @@ set softtabstop=0
 
 "stop the cursor from going one past the last char in each line
 set ve=""
+
 
 "show all buffers, then select one by typing that number
 nnoremap gb :ls<cr>:buffer

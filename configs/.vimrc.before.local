@@ -1,0 +1,5 @@
+""Enter no longer gets stuck by neocomplcache
+let g:spf13_noninvasive_completion = 1
+
+"disallow spf13-vim to overwrite H and L commands
+let g:spf13_no_fastTabs = 1
