@@ -165,7 +165,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/Dropbox/Projects/git/scripts:$PATH
 
 # Add rubygems
-#export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
 #export PATH=/root/.gem/ruby/2.0.0/bin:$PATH
 
 # For screen, do all the git stuff
