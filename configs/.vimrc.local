@@ -44,6 +44,10 @@ set ve=""
 "show all buffers, then select one by typing that number
 nnoremap gb :ls<cr>:buffer
 
+"reverse ` and '"
+nnoremap ` '
+nnoremap ' `
+
 " Takes whatever was last searched for and does
 " a find and replace for what you type next
 " Useful with the * command
