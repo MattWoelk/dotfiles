@@ -48,6 +48,10 @@ nnoremap gb :ls<cr>:buffer
 nnoremap ` '
 nnoremap ' `
 
+""relative and absolute line numbers
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
 " Takes whatever was last searched for and does
 " a find and replace for what you type next
 " Useful with the * command
