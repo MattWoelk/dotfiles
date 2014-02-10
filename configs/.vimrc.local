@@ -1,6 +1,8 @@
 " THIS IS FOR USE WITH spf13-vim "
 " my edits to the other file has lines which start with ""
 
+UnBundle 'justinmk/vim-sneak'
+
 colorscheme ir_black
 nnoremap <CR> :noh<CR>
 
