@@ -21,7 +21,9 @@ map e :set showtabline!=always,never<CR>
 set showtabline=always
 
 ""press enter to hide search highlighting
-map <CR> :noh<CR>
+""noremap <CR> :noh<CR><CR>
+""nmap -builtin <Esc> :noh<Esc> ""TODO: find a good solution
+nmap -builtin <C-l> :noh<CR><C-l>
 
 "reclaim copy and paste keys
 nmap -builtin <C-c> <C-v><C-c>
