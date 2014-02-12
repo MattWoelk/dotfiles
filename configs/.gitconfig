@@ -40,6 +40,7 @@
 [diff]
 	tool = vimdiff
 	mnemonicprefix = true
+	algorithm = patience
 [core]
 	editor = vim
 [push]
