@@ -12,6 +12,8 @@
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
+[mergetool]
+	keepBackup = false
 [alias]
 	l = log --graph --decorate --oneline --all --date-order
 	lp = log --graph --decorate --oneline --all --date-order -p
