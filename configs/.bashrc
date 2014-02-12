@@ -8,6 +8,8 @@ if [[ `uname` == 'Darwin' ]]; then
     # Because Mac's built-in vim is old. :/
 fi
 
+export EDITOR=/usr/bin/vim
+
 # alias ls='ls -l --color | less --quit-if-one-screen'
 # doesn't work if we want to add more flags to ls, therefore:
 function ls() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
