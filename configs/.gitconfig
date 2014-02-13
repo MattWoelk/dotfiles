@@ -39,6 +39,7 @@
 	lastw = log -1 HEAD -p --word-diff
 	ignored = ls-files . --ignored --exclude-standard --others
 	untracked = ls-files . --exclude-standard --others
+	ignore = "!f() { git status --porcelain | grep \"??\" | sed \"s/^?? //\" | sed \"s#.*/##\" | sed \"s/\\.gitignore//\" | grep -v \"^$\" >> .gitignore; }; f"
 [diff]
 	tool = vimdiff
 	mnemonicprefix = true
