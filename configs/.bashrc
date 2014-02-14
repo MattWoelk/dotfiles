@@ -31,6 +31,7 @@ alias lessp='less --quit-if-one-screen'
 alias r='ranger'
 alias p='ipython --pylab'
 alias info='info --vi-keys'
+alias ip_external='curl -s icanhazip.com'
 
 #PS1="\`if [ \$? = 0 ]; then echo '\[\e[1;32m\]'; else echo \[\e[31m\]; fi\`\[\$(date +%Y-%m-%d),\t\e[1;32m\][\w]\\$ \[\e[0m\]"
 #PS1="\`if [ \$? = 0 ]; then echo '\[\e[1;32m\]'; else echo \[\e[31m\]O_O; fi\`\[\e[1;32m\][\w]\\$ \[\e[0m\]"
