@@ -48,6 +48,9 @@ nnoremap gb :ls<cr>:buffer
 nnoremap ` '
 nnoremap ' `
 
+""shift escape to save
+nnoremap <S-Esc> :w<CR>
+
 ""relative and absolute line numbers
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
