@@ -1,28 +1,17 @@
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 bind "set completion-ignore-case on"
-#export TERM=xterm-color
-#export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
-#export CLICOLOR=1
 if [[ `uname` == 'Darwin' ]]; then
-  alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-    # Because Mac's built-in vim is old. :/
+  alias vim='/Applications/MacVim.app/Contents/MacOS/Vim' # Because Mac's built-in vim is old. :/
 fi
 
 export EDITOR=/usr/bin/vim
 
-# alias ls='ls -l --color | less --quit-if-one-screen'
-# doesn't work if we want to add more flags to ls, therefore:
 function ls() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
-  # works in OSX because we did sudo port install coreutils +with_default_names
-  # the `| less --quit-if-one-screen` is so that if the output is too long
-  #   for the page, it will pipe to less
   # using a function instead, so that we can put flags on ls still
   # the -X is not required in screen, but is, for some reason, without screen. Seen so far only with Ubuntu's Terminal Program
 function sl() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
 function s() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
 function l() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
-  # because I make these mistakes all of the time :/
-  # TODO BUG! ls now only works from within screen. This is messed up...
 
 alias grep='grep -n --colour'
 alias matlab='matlab -nosplash -nodesktop'
@@ -32,13 +21,6 @@ alias r='ranger'
 alias p='ipython --pylab'
 alias info='info --vi-keys'
 alias ip_external='curl -s icanhazip.com'
-
-#PS1="\`if [ \$? = 0 ]; then echo '\[\e[1;32m\]'; else echo \[\e[31m\]; fi\`\[\$(date +%Y-%m-%d),\t\e[1;32m\][\w]\\$ \[\e[0m\]"
-#PS1="\`if [ \$? = 0 ]; then echo '\[\e[1;32m\]'; else echo \[\e[31m\]O_O; fi\`\[\e[1;32m\][\w]\\$ \[\e[0m\]"
-#PS1="\`if [ \$? = 0 ]; then echo '\[\e[1;32m\]'^_^; else echo \[\e[31m\]O_O; fi\`[\w]\\$ \[\e[0m\]"
-#PS1="\[\033[0;33m\][\!]\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\` -- [\u.\h: ]\$\[\033[0m\] \033]0;\007"
-
-
 
 function _git_prompt() {
     local git_status="`git status -unormal 2>&1`"
@@ -67,9 +49,6 @@ function _prompt_command() {
     PS1="`_git_prompt`""\`if [ \$? = 0 ]; then if [ $UID -eq "0" ]; then echo '\[\e[35m\]'; else echo '\[\e[32m\]'; fi; else echo \[\e[31m\]; fi\`[\u@\h \w]\\$ \[\e[0m\]"
 }
 PROMPT_COMMAND=_prompt_command
-
-
-
 
 #########################
 #Here are the backslash-escape special characters that have meaning to bash:
@@ -131,13 +110,6 @@ PROMPT_COMMAND=_prompt_command
 #########################
 
 
-##
-# Your previous /Users/woelk/.bash_profile file was backed up as /Users/woelk/.bash_profile.macports-saved_2012-11-22_at_12:59:15
-##
-
-# MacPorts Installer addition on 2012-11-22_at_12:59:15: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/libexec/gnubin/:/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
 
 # Enable bash completion for git
 # The source is downloaded from here: https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
@@ -156,20 +128,11 @@ alias ts='tig status'
 # Use LS_COLORS
 eval $( dircolors -b $HOME/.LS_COLORS)
 
-##
-# Your previous /Users/woelk/.bash_profile file was backed up as /Users/woelk/.bash_profile.macports-saved_2012-12-11_at_10:13:47
-##
-
-# MacPorts Installer addition on 2012-12-11_at_10:13:47: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
 # Add my git bash scripts
 export PATH=~/Dropbox/Projects/git/scripts:$PATH
 
 # Add rubygems
 export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
-#export PATH=/root/.gem/ruby/2.0.0/bin:$PATH
 
 # For screen, do all the git stuff
 # AND set window title to be currently running command
