@@ -39,6 +39,8 @@ set softtabstop=0
 
 "stop the cursor from going one past the last char in each line
 set ve=""
+"stop the cursor from going one past the last char in visual mode
+set selection=old
 
 
 "show all buffers, then select one by typing that number
