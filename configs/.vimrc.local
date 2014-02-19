@@ -50,8 +50,6 @@ nnoremap gb :ls<cr>:buffer
 nnoremap ` '
 nnoremap ' `
 
-""shift escape to save
-nnoremap <S-Esc> :w<CR>
 ""shift tab to save
 nnoremap <S-Tab> :w<CR>
 
