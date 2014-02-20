@@ -4,6 +4,9 @@ set guioptions=bCrsn
 set defsearch=google
 set hlfind
 
+nmap -builtin H gT
+nmap -builtin L gt
+
 command! -nargs=* bmlist tabopen about:mybookmarks
 command! -nargs=1 popup execute "open " + content.location.host
 
