@@ -51,7 +51,7 @@ nnoremap ` '
 nnoremap ' `
 
 ""shift tab to save
-nnoremap <S-Tab> :w<CR>
+nnoremap <Tab> :w<CR>
 
 ""relative and absolute line numbers
 autocmd InsertEnter * :set number
