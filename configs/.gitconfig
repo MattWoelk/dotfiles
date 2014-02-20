@@ -17,6 +17,7 @@
 [alias]
 	l = log --graph --decorate --oneline --all --date-order
 	lp = log --graph --decorate --oneline --all --date-order -p
+	ll = log --graph --decorate --oneline --date-order
 	co = checkout
 	br = branch -v
 	ci = commit

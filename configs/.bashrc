@@ -118,11 +118,13 @@ source ~/.git-completion.bash
 # alias g to git, and allow autocompletion for it as well
 alias g='git'
 alias gl='git l'
+alias gll='git ll'
 alias gd='git diff'
 complete -o default -o nospace -F _git g
 
 # curses (CLI) alternative to gitk
 alias t='tig --all'
+alias tl='tig'
 alias ts='tig status'
 
 # Use LS_COLORS
