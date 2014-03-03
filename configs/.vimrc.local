@@ -63,6 +63,10 @@ autocmd InsertLeave * :set relativenumber
 map <leader>r <Esc>:%s/\(<C-r>/\)//g<left><left>
 map <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>"
 
+" Make the word the cursor is on or just after UPPERCASE without leaving
+" insert mode using Ctrl b
+imap <C-b> <Esc>BgUEEi
+
 " make escape instant; get rid of escape delay"
 set ttimeoutlen=10
 augroup FastEscape
