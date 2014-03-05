@@ -21,6 +21,8 @@ alias r='ranger'
 alias p='ipython --pylab'
 alias info='info --vi-keys'
 alias ip_external='curl -s icanhazip.com'
+alias gdiff='git diff --no-index'
+alias gdiffw='git diff --no-index --word-diff'
 
 function _git_prompt() {
     local git_status="`git status -unormal 2>&1`"
