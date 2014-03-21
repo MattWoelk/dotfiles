@@ -12,6 +12,7 @@ function ls() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
 function sl() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
 function s() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
 function l() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
+function ll() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
 
 alias grep='grep -n --colour'
 alias matlab='matlab -nosplash -nodesktop'
