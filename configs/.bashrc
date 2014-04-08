@@ -6,6 +6,18 @@ fi
 
 export EDITOR=/usr/bin/vim
 
+function ranger-cd {
+    tempfile='/tmp/rangertmpdirtmp'
+    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
+}
+
+bind '"\C-o":"ranger-cd\C-m"'
+
 function ls() { command ls -lh --color "$@" | less -RX --quit-if-one-screen ; }
   # using a function instead, so that we can put flags on ls still
   # the -X is not required in screen, but is, for some reason, without screen. Seen so far only with Ubuntu's Terminal Program
