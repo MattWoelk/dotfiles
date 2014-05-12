@@ -6,6 +6,9 @@ UnBundle 'justinmk/vim-sneak'
 colorscheme ir_black
 nnoremap <CR> :noh<CR>
 
+" delete some text, then highlight some other text and hit <C-x>. The two sections will be swapped.
+vnoremap <C-x> <Esc>`.``gvP``P
+
 "exit visual mode when indenting (back to normal)
 "to indent again, just hit '.'
 vunmap >
@@ -50,7 +53,7 @@ nnoremap gb :ls<cr>:buffer
 nnoremap ` '
 nnoremap ' `
 
-""shift tab to save
+""tab to save
 nnoremap <Tab> :w<CR>
 
 ""relative and absolute line numbers
