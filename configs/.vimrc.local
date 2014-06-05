@@ -22,7 +22,7 @@ noremap Q <Nop>
 
 "give back C-e
 unmap <C-e>
-map <leader>ee :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+noremap <leader>ee :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 
 "make j and k behave normally
 "(without this, relative line numbers and word wrap
@@ -34,8 +34,8 @@ set wildignorecase "ignore case in filename completion :)
                    "only works for vim 7.3.107 or something
 
 "tabularize. Align comma with no space on left of comma.
-nmap <Leader>a,, :Tabularize /,\zs<CR>
-vmap <Leader>a,, :Tabularize /,\zs<CR>
+nnoremap <Leader>a,, :Tabularize /,\zs<CR>
+vnoremap <Leader>a,, :Tabularize /,\zs<CR>
 
 "backspacing removes only one space at a time, not a tab's worth
 set softtabstop=0
@@ -63,12 +63,12 @@ autocmd InsertLeave * :set relativenumber
 " Takes whatever was last searched for and does
 " a find and replace for what you type next
 " Useful with the * command
-map <leader>r <Esc>:%s/\(<C-r>/\)//g<left><left>
-map <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>"
+noremap <leader>r <Esc>:%s/\(<C-r>/\)//g<left><left>
+noremap <leader>R <Esc>:%s/\(<C-r>/\)//gc<left><left><left>"
 
 " Make the word the cursor is on or just after UPPERCASE without leaving
 " insert mode using Ctrl b
-imap <C-b> <Esc>BgUEEi
+inoremap <C-b> <Esc>BgUEEi
 
 " make escape instant; get rid of escape delay"
 set ttimeoutlen=10
@@ -113,7 +113,7 @@ function! NamedArgsExpand()
         /:
         :Tabularize /:
 endfunction
-autocmd FileType nasl map <silent> <leader>ne :call NamedArgsExpand()<CR>
+autocmd FileType nasl noremap <silent> <leader>ne :call NamedArgsExpand()<CR>
 
 ""Quickly add a semicolon to the end of the current line;
-autocmd FileType nasl map <silent> <leader>; mpA;<Esc>`p
+autocmd FileType nasl noremap <silent> <leader>; mpA;<Esc>`p
