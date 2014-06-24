@@ -7,11 +7,11 @@ set hlfind
 command! -nargs=* bmlist tabopen about:mybookmarks
 command! -nargs=1 popup execute "open " + content.location.host
 
-""press yt to view a YouTube video as fullscreened within the window
-map yt -js dactyl.open( String.replace(buffer.URL, /watch/, "watch_popup") )
+""press gy to view a YouTube video as fullscreened within the window
+map gy -js dactyl.open( String.replace(buffer.URL, /watch/, "watch_popup") )
 
-""press yd to break the current tab into its own window
-map yd -ex tabdetach
+""press gd to break the current tab into its own window
+map gd -ex tabdetach
 
 ""press x to toggles firefox's fullscreen mode
 map x -ex set invfullscreen
