@@ -34,7 +34,8 @@
 	dihw = diff --word-diff HEAD
 	dt = difftool --no-prompt
 	mt = mergetool --no-prompt
-	pull-base = pull --rebase
+	blame-ignore-whitespace = blame -w
+	pull-rebase = pull --rebase
 	unstage   = reset HEAD --
 	undo-file = checkout --
 	last = log -1 HEAD -p
