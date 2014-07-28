@@ -100,20 +100,7 @@ let g:tagbar_type_nasl = {
 
 let g:syntastic_nasl_checkers = ['nasl_parse', 'nasl']
 
-function! NamedArgsExpand()
-        :s/,\s*/,
-/g
-        ?(
-        :s/(\s*/(
-/
-        /)
-        :s/\s*)/
-)/
-        normal V%=
-        /:
-        :Tabularize /:
-endfunction
-autocmd FileType nasl noremap <silent> <leader>ne :call NamedArgsExpand()<CR>
+autocmd FileType nasl map <silent> <leader>ne [(mnV%:s/,\s*\([^$]\)/,\r\1/g'nf(V%:s/(\s*\([^)]\)/(\r\1/'nf(V%:s/\([^(]\)\s*)/\1\r)/'nf(V%='nf(V%:Tabularize /:
 
 ""Quickly add a semicolon to the end of the current line;
 autocmd FileType nasl noremap <silent> <leader>; mpA;<Esc>`p
