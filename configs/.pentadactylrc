@@ -1,6 +1,6 @@
 set complete=slf
 set editor='/usr/bin/gvim -f'
-set guioptions=bCrsnmT
+set guioptions=bCrsnT
 set defsearch=google
 set hlfind
 
