@@ -1,6 +1,4 @@
-set show-date = relative
-set show-id = true
-set show-author = false
-set read-git-colors = true
+set main-view = date:relative author:abbreviated id:true commit-title:true,graph=true,refs=true
+set git-colors = true
 set commit-order = date
 set line-graphics = utf-8
