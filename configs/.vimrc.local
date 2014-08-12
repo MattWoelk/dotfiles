@@ -86,7 +86,7 @@ autocmd BufNewFile,BufRead *.audit set syntax=xml
 autocmd BufNewFile,BufRead *.nasl set filetype=nasl
 autocmd BufNewFile,BufRead *.inc set filetype=nasl
 autocmd BufNewFile,BufRead *.inc set indentexpr=
-autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 colorcolumn=70
+autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 colorcolumn=80
 autocmd FileType nasl set commentstring=#\ %s
 
 let g:tagbar_type_nasl = {
