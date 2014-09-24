@@ -2,6 +2,7 @@
 " my edits to the other file has lines which start with ""
 
 UnBundle 'justinmk/vim-sneak'
+UnBundle 'gcmt/wildfire.vim'
 
 colorscheme ir_black
 nnoremap <CR> :noh<CR>
