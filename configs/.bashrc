@@ -152,6 +152,10 @@ export PATH=~/Dropbox/Projects/git/scripts:$PATH
 # Add rubygems
 export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
 
+# Add cabal
+export PATH=~/.cabal/bin:$PATH
+alias ghcmod='ghc-mod'
+
 # For screen, do all the git stuff
 # AND set window title to be currently running command
 if [[ $TERM == 'screen' ]]; then
