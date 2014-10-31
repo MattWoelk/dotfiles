@@ -7,6 +7,9 @@ alias nvim='nvim -u ~/.vimrc'
 
 export EDITOR=/usr/bin/vim
 
+# Ignore duplicates and empty lines in command history:
+export HISTCONTROL=ignoreboth:erasedups
+
 function ranger-cd {
     tempfile='/tmp/rangertmpdirtmp'
     /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
