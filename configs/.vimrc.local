@@ -34,10 +34,6 @@ nunmap k
 set wildignorecase "ignore case in filename completion :)
                    "only works for vim 7.3.107 or something
 
-"tabularize. Align comma with no space on left of comma.
-nnoremap <Leader>a,, :Tabularize /,\zs<CR>
-vnoremap <Leader>a,, :Tabularize /,\zs<CR>
-
 "backspacing removes only one space at a time, not a tab's worth
 set softtabstop=0
 
@@ -89,6 +85,9 @@ autocmd BufNewFile,BufRead *.inc set filetype=nasl
 autocmd BufNewFile,BufRead *.inc set indentexpr=
 autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 colorcolumn=80
 autocmd FileType nasl set commentstring=#\ %s
+
+""Set .doctest files to use python syntax highlighting
+autocmd BufNewFile,BufRead *.doctest   set syntax=python
 
 let g:tagbar_type_nasl = {
         \ 'ctagstype' : 'nasl',
