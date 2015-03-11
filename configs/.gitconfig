@@ -15,6 +15,7 @@
 [mergetool]
 	keepBackup = false
 [alias]
+	alias = config --get-regexp alias
 	l = log --graph --decorate --oneline --all --date-order
 	lp = log --graph --decorate --oneline --all --date-order -p
 	ll = log --graph --decorate --oneline --date-order
@@ -43,6 +44,7 @@
 	ignored = ls-files . --ignored --exclude-standard --others
 	untracked = ls-files . --exclude-standard --others
 	ignore = "!f() { git status --porcelain | grep \"??\" | sed \"s/^?? //\" | sed \"s#.*/##\" | sed \"s/\\.gitignore//\" | grep -v \"^$\" >> .gitignore; }; f"
+	pushup = "!f() { git branch | grep \"^*\" | cut -c 3- | xargs -I{} git push --set-upstream origin {}; }; f"
 [diff]
 	tool = vimdiff
 	mnemonicprefix = true
