@@ -169,6 +169,9 @@ if [[ $TERM == 'screen' ]]; then
   PROMPT_COMMAND=_run_first
 fi
 
+#Nessus path
+export PATH=/opt/nessus/sbin:$PATH
+export PATH=/opt/nessus/bin:$PATH
 
 ## nasl
 export FEED=~/nasl
