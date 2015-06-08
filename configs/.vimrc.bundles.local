@@ -2,3 +2,4 @@
 Bundle 'tenable/vim-nasl'
 Bundle 'jdonaldson/vaxe'
 UnBundle 'gcmt/wildfire.vim'
+Bundle 'mustache/vim-mustache-handlebars'
