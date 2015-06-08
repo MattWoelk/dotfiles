@@ -141,6 +141,11 @@ alias gll='git ll'
 alias gd='git diff'
 complete -o default -o nospace -F _git g
 
+# alias c to cargo, ct is cargo test, cr is cargo run
+alias c='cargo'
+alias ct='cargo test'
+alias cr='cargo run'
+
 # curses (CLI) alternative to gitk
 alias t='tig --all'
 alias tl='tig'
