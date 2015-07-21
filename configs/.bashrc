@@ -139,6 +139,7 @@ source ~/.git-completion.bash
 alias g='git'
 alias gl='git l'
 alias gll='git ll'
+alias glf='git lf'
 alias gd='git diff'
 complete -o default -o nospace -F _git g
 

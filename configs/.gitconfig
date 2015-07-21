@@ -19,6 +19,7 @@
 	l = log --graph --decorate --oneline --all --date-order
 	lp = log --graph --decorate --oneline --all --date-order -p
 	ll = log --graph --decorate --oneline --date-order
+	lf = log --graph --decorate --oneline --date-order --first-parent
 	lt = log --color --graph --pretty=format:'%C(auto)%h %C(bold blue)[%cr] <%an>%C(auto)%d %Creset %s %Creset' --abbrev-commit
 	co = checkout
 	br = branch -v
