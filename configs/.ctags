@@ -1,5 +1,9 @@
 --langdef=nasl
 --langmap=nasl:.inc
---regex-nasl=/^[ \t]*function[ \t]+([_a-zA-Z][_a-zA-Z0-9]*)/\1/f,function/
---regex-nasl=/^([_a-zA-Z][_a-zA-Z0-9]*)[ \t]*=/\1/v,variable/
---regex-nasl=/^global_var ([_a-zA-Z][_a-zA-Z0-9]*)/\1/g,global/
+--regex-nasl=/^[ \t](?!public|private)*function[ \t]+([_a-zA-Z][_a-zA-Z0-9]*)/\1/f,function/
+--regex-nasl=/^[ \t]*private function[ \t]+([_a-zA-Z][_a-zA-Z0-9]*)/\1/r,private function/
+--regex-nasl=/^[ \t]*public function[ \t]+([_a-zA-Z][_a-zA-Z0-9]*)/\1/u,public function/
+--regex-nasl=/^(var)? ?([_a-zA-Z][_a-zA-Z0-9]*)[ \t]*=/\1/v,variable/
+--regex-nasl=/^[ \t]*global_var ([_a-zA-Z][_a-zA-Z0-9]*)/\1/g,global/
+--regex-nasl=/^namespace ([_a-zA-Z][_a-zA-Z0-9]*)/\1/n,namespace/
+--regex-nasl=/^[ \t]*object ([_a-zA-Z][_a-zA-Z0-9]*)/\1/o,object/
