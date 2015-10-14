@@ -98,7 +98,8 @@ let g:tagbar_type_nasl = {
         \ ]
 \ }
 
-let g:syntastic_nasl_checkers = ['nasl_parse', 'nasl']
+""let g:syntastic_nasl_checkers = ['nasl_parse', 'nasl']
+let g:syntastic_nasl_checkers = ['nasl']
 
 autocmd FileType nasl map <silent> <leader>ne [(mnV%:s/,\s*\([^$]\)/,\r\1/g'nf(V%:s/(\s*\([^)]\)/(\r\1/'nf(V%:s/\([^(]\)\s*)/\1\r)/'nf(V%='nf(V%:Tabularize /:
 
