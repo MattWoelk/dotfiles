@@ -106,3 +106,6 @@ autocmd FileType nasl map <silent> <leader>ne [(mnV%:s/,\s*\([^$]\)/,\r\1/g'nf(
 ""Quickly add a semicolon to the end of the current line;
 autocmd FileType nasl noremap <silent> <leader>; mpA;<Esc>`p
 autocmd FileType rust noremap <silent> <leader>; mpA;<Esc>`p
+
+""disallow mouse, so I can use it to copy stuff from terminals instead
+set mouse=""
