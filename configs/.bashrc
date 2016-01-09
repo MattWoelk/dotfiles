@@ -175,6 +175,9 @@ if [[ $TERM == 'screen' ]]; then
   PROMPT_COMMAND=_run_first
 fi
 
+## rust / racer
+export PATH=/home/matt/.multirust/toolchains/stable/cargo/bin:$PATH
+
 #Nessus path
 export PATH=/opt/nessus/sbin:$PATH
 export PATH=/opt/nessus/bin:$PATH
