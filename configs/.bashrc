@@ -139,6 +139,7 @@ source ~/.git-completion.bash
 alias g='git'
 alias gl='git l'
 alias gll='git ll'
+alias glf='git lf'
 alias gd='git diff'
 complete -o default -o nospace -F _git g
 
@@ -183,9 +184,9 @@ export PATH=/opt/nessus/sbin:$PATH
 export PATH=/opt/nessus/bin:$PATH
 
 ## nasl
-export FEED=~/nasl
-export NBIN=~/nbin
+export FEED=~/plugin_dev
+export NBIN=~/plugin_dev/nbin
 export NASL_REPO=~/plugin_dev
 export NBIN_REPO=~/plugin_dev/nbin
 export TAP_REPO=~/tap
-export NASL_INCLUDE="${NBIN_REPO}/mysql;${NASL_REPO};${NBIN_REPO}/**"
+export NASL_INCLUDE="${TAP_REPO};${NASL_REPO};${NBIN_REPO}/**"
