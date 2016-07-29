@@ -184,4 +184,4 @@ export PATH=/opt/nessus/sbin:$PATH
 export PATH=/opt/nessus/bin:$PATH
 
 ## nasl
-export PLUGIN_DEV_REPO=~/plugin_dev
+export NASL_INCLUDE="/home/matt/plugin_dev/unit_tests;/home/matt/plugin_dev;/home/matt/plugin_dev/nbin/**"
