@@ -117,3 +117,7 @@ autocmd BufEnter *.inc :set nospell
 
 ""disallow mouse, so I can use it to copy stuff from terminals instead
 set mouse=""
+
+if &diff
+    set nospell
+endif
