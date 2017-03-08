@@ -3,7 +3,8 @@ bind "set completion-ignore-case on"
 if [[ `uname` == 'Darwin' ]]; then
   alias vim='/Applications/MacVim.app/Contents/MacOS/Vim' # Because Mac's built-in vim is old. :/
 fi
-alias nvim='nvim -u ~/.vimrc'
+#alias nvim='nvim -u ~/.vimrc'
+alias nv=nvim
 
 export EDITOR=/usr/bin/vim
 
